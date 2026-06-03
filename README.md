@@ -39,10 +39,10 @@ from scipy.stats import norm
 
 # Define Market Parameters
 S = 72.54 #underlying price
-K= 74.00 #Strike price
-T= 0.027777777778 #Time to expiration #7 days to expire
-r= 0.0363 #UST 1 Month yield
-vol= 0.6080755418348802    # Current Stock Price
+K = 74.00 #Strike price
+T = 0.027777777778 #Time to expiration #7 days to expire
+r = 0.0363 #UST 1 Month yield
+vol = 0.6080755418348802    # Current Stock Price
 
 
 def delta_call(S, K, T, r, vol):
