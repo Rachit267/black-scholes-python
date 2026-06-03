@@ -82,7 +82,7 @@ print(f"Rho (1% Shift): {rho_call(S, K, T, r, vol):.4f}")
 
 When running the 3-month option scenario parameters above ($S=100, K=105, T=0.25, r=0.05, \sigma=0.20$), the library produces the exact values utilized by institutional market desks:
 
-* **Delta:** '0.4459'
+* **Delta:** `0.4459`
 * **Gamma:** `0.0538`
 * **Theta (Daily):** `-0.1463`
 * **Vega (1%):** `0.0478`
