@@ -38,11 +38,12 @@ import numpy as np
 from scipy.stats import norm
 
 # Define Market Parameters
-S = 100.0    # Current Stock Price
-K = 105.0    # Option Strike Price
-T = 0.25     # Time to Expiration (0.25 years = 3 months)
-r = 0.05     # Annualized Risk-Free Interest Rate (5%)
-vol = 0.20   # Annualized Asset Volatility (20%)
+S = 72.54 #underlying price
+K= 74.00 #Strike price
+T= 0.027777777778 #Time to expiration #7 days to expire
+r= 0.0363 #UST 1 Month yield
+vol= 0.6080755418348802    # Current Stock Price
+
 
 def delta_call(S, K, T, r, vol):
     d1 = (np.log(S/K) + (r + 0.5 * vol**2) * T) / (vol * np.sqrt(T))
@@ -81,11 +82,11 @@ print(f"Rho (1% Shift): {rho_call(S, K, T, r, vol):.4f}")
 
 When running the 3-month option scenario parameters above ($S=100, K=105, T=0.25, r=0.05, \sigma=0.20$), the library produces the exact values utilized by institutional market desks:
 
-* **Delta:** `0.3772`
-* **Gamma:** `0.0380`
-* **Theta (Daily):** `-0.0256`
-* **Vega (1%):** `0.1899`
-* **Rho (1%):** `0.0881`
+* **Delta:** '0.4459'
+* **Gamma:** `0.0538`
+* **Theta (Daily):** `-0.1463`
+* **Vega (1%):** `0.0478`
+* **Rho (1%):** `0.0083`
 
 ---
 
